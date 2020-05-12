@@ -15,7 +15,7 @@ github地址（国外）：https://github.com/piaoyun/vnstat-dashboard
 ### 国内：
 ```bash
 cd /home/wwwroot
-wget https://gitee.com/piaoyun/vnstat-dashboard/archive/master.zip
+wget https://gitee.com/piaoyun/vnstat-dashboard/repository/archive/master.zip
 unzip master.zip
 mv vnstat-dashboard-master/app/* vnstat
 rm vnstat-dashboard-master -rf
