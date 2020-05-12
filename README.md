@@ -1,3 +1,74 @@
+gitee地址（国内）：https://gitee.com/piaoyun/proxychains-ng
+
+github地址（国外）：https://github.com/piaoyun/proxychains-ng
+
+资源搬家，转自：https://github.com/rofl0r/proxychains-ng
+
+主要是自用，方便国内用户下载
+
+
+## 1.安装Web界面
+首先需要安装PHP，可以使用lnmp组件来完成这一操作。
+再安装`composer`.
+新建一个`vhost`，此处假设根目录为`/home/wwwroot/vnstat`
+
+### 国内：
+```bash
+cd /home/wwwroot
+wget https://gitee.com/piaoyun/vnstat-dashboard/archive/master.zip
+unzip master.zip
+mv vnstat-dashboard-master/app/* vnstat
+rm vnstat-dashboard-master -rf
+cd vnstat
+composer install
+nano includes/config.php
+```
+
+### 国外：
+```bash
+cd /home/wwwroot
+wget https://github.com/piaoyun/vnstat-dashboard/archive/master.zip
+unzip master.zip
+mv vnstat-dashboard-master/app/* vnstat
+rm vnstat-dashboard-master -rf
+cd vnstat
+composer install
+nano includes/config.php
+```
+
+## 编辑配置文件：
+```bash
+// Set the default system Timezone，修改时区，东八区可以按以下设置，更多时区见https://www.php.net/manual/zh/timezones.php
+date_default_timezone_set('Asia/Shanghai');
+
+// Path of vnstat
+$vnstat_bin_dir = '/usr/bin/vnstat';
+
+// Set to true to set your own interfaces
+$use_predefined_interfaces = false;
+
+if ($use_predefined_interfaces == true) {
+    $interface_list = ["ens18", "eth1"];
+
+    $interface_name['eth0'] = "Internal #1";
+    $interface_name['eth1'] = "Internal #2";
+}
+```
+
+##允许popen函数
+此程序使用了popen函数来运行vnstat，而LNMP默认禁用了这个函数，所以需要更改PHP配置文件。否则Web界面是没有数据的。
+```bash
+nano /usr/local/php/etc/php.ini
+```
+
+找到`disable_functions`
+```bash
+disable_functions = passthru,system,chroot,chgrp,chown,shell_exec,proc_open,popen,proc_get_status,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru
+```
+将其中的`popen`去掉，然后重启PHP，`systemctl restart php-fpm。`
+这样就可以啦。
+
+
 # What is vnstat-dashboard?
 This dashboard is an adaptation of vnstat-php-frontend by bjd using Bootstrap written in PHP. It provides the following:
 
