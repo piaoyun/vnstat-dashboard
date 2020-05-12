@@ -1,8 +1,8 @@
-gitee地址（国内）：https://gitee.com/piaoyun/proxychains-ng
+gitee地址（国内）：https://gitee.com/piaoyun/vnstat-dashboard
 
-github地址（国外）：https://github.com/piaoyun/proxychains-ng
+github地址（国外）：https://github.com/piaoyun/vnstat-dashboard
 
-资源搬家，转自：https://github.com/rofl0r/proxychains-ng
+资源搬家，转自：https://github.com/alexandermarston/vnstat-dashboard/
 
 主要是自用，方便国内用户下载
 
@@ -55,13 +55,14 @@ if ($use_predefined_interfaces == true) {
 }
 ```
 
-##允许popen函数
+## 允许popen函数
 此程序使用了popen函数来运行vnstat，而LNMP默认禁用了这个函数，所以需要更改PHP配置文件。否则Web界面是没有数据的。
 ```bash
 nano /usr/local/php/etc/php.ini
 ```
 
 找到`disable_functions`
+
 ```bash
 disable_functions = passthru,system,chroot,chgrp,chown,shell_exec,proc_open,popen,proc_get_status,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru
 ```
