@@ -69,6 +69,11 @@ disable_functions = passthru,system,chroot,chgrp,chown,shell_exec,proc_open,pope
 将其中的`popen`去掉，然后重启PHP，`systemctl restart php-fpm。`
 这样就可以啦。
 
+# 截图演示
+![YtjlqO.png](https://s1.ax1x.com/2020/05/12/YtjlqO.png)
+![YtjMM6.png](https://s1.ax1x.com/2020/05/12/YtjMM6.png)
+![YtjQsK.png](https://s1.ax1x.com/2020/05/12/YtjQsK.png)
+
 
 # What is vnstat-dashboard?
 This dashboard is an adaptation of vnstat-php-frontend by bjd using Bootstrap written in PHP. It provides the following:
