@@ -1,13 +1,13 @@
     <div class="container">
         <ul class="nav nav-tabs" id="tableTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="hourly-table-tab" data-toggle="tab" href="#hourly-table" role="tab" aria-controls="hourly-table" aria-selected="true">Hourly</a>
+                <a class="nav-link active" id="hourly-table-tab" data-toggle="tab" href="#hourly-table" role="tab" aria-controls="hourly-table" aria-selected="true">小时</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="daily-table-tab" data-toggle="tab" href="#daily-table" role="tab" aria-controls="daily-table" aria-selected="false">Daily</a>
+                <a class="nav-link" id="daily-table-tab" data-toggle="tab" href="#daily-table" role="tab" aria-controls="daily-table" aria-selected="false">天</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="monthly-table-tab" data-toggle="tab" href="#monthly-table" role="tab" aria-controls="monthly-table" aria-selected="false">Monthly</a>
+                <a class="nav-link" id="monthly-table-tab" data-toggle="tab" href="#monthly-table" role="tab" aria-controls="monthly-table" aria-selected="false">月</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="top10-table-tab" data-toggle="tab" href="#top10-table" role="tab" aria-controls="top10-table" aria-selected="false">Top 10</a>
@@ -19,10 +19,10 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Hour</th>
-                            <th>Received</th>
-                            <th>Sent</th>
-                            <th>Total</th>
+                            <th>小时</th>
+                            <th>下载</th>
+                            <th>上传</th>
+                            <th>全部</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,10 +42,10 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Day</th>
-                            <th>Received</th>
-                            <th>Sent</th>
-                            <th>Total</th>
+                            <th>天</th>
+                            <th>下载</th>
+                            <th>上传</th>
+                            <th>全部</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,10 +65,10 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Month</th>
-                            <th>Received</th>
-                            <th>Sent</th>
-                            <th>Total</th>
+                            <th>月</th>
+                            <th>下载</th>
+                            <th>上传</th>
+                            <th>全部</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,10 +88,10 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Day</th>
-                            <th>Received</th>
-                            <th>Sent</th>
-                            <th>Total</th>
+                            <th>天</th>
+                            <th>下载</th>
+                            <th>上传</th>
+                            <th>全部</th>
                         </tr>
                     </thead>
                     <tbody>

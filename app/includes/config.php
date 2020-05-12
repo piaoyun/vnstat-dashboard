@@ -22,7 +22,7 @@
 error_reporting(E_ALL);*/
 
 // Set the default system Timezone
-date_default_timezone_set('Europe/London');
+date_default_timezone_set('Asia/Shanghai');
 
 // Path of vnstat
 $vnstat_bin_dir = '/usr/bin/vnstat';
@@ -31,7 +31,7 @@ $vnstat_bin_dir = '/usr/bin/vnstat';
 $use_predefined_interfaces = false;
 
 if ($use_predefined_interfaces == true) {
-    $interface_list = ["eth0", "eth1"];
+    $interface_list = ["ens18", "eth1"];
 
     $interface_name['eth0'] = "Internal #1";
     $interface_name['eth1'] = "Internal #2";

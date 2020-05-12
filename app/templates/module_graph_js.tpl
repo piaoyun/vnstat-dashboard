@@ -10,10 +10,10 @@
         {
             var data = new google.visualization.DataTable();
 
-            data.addColumn('date', 'Hour');
-            data.addColumn('number', 'Traffic In');
-            data.addColumn('number', 'Traffic Out');
-            data.addColumn('number', 'Total Traffic');
+            data.addColumn('date', '小时');
+            data.addColumn('number', '下载');
+            data.addColumn('number', '上传');
+            data.addColumn('number', '全部');
 
             data.addRows([
 {foreach from=$hourlyGraphData key=key item=value}
@@ -22,7 +22,7 @@
             ]);
 
             let options = {
-                title: 'Hourly Network Traffic',
+                title: '小时流量图表1',
                 orientation: 'horizontal',
                 legend: { position: 'right' },
                 explorer: { 
@@ -31,11 +31,11 @@
                     maxZoomOut: 3.0
             	},
                 vAxis: {
-                    title: 'Data',
+                    title: '数据',
                     format: '##.## {$hourlyLargestPrefix}'
                 },
                 hAxis: {
-                    title: 'Hour',
+                    title: '小时流量图表2',
                     format: 'HH:mm',
                     direction: -1,
                     ticks: [
@@ -46,7 +46,7 @@
                 }
             };
             
-            var formatDate = new google.visualization.DateFormat({ pattern: 'dd/MM/yyyy HH:mm' });
+            var formatDate = new google.visualization.DateFormat({ pattern: 'yyyy-MM-dd HH:mm' });
             formatDate.format(data, 0);
             
             var formatNumber = new google.visualization.NumberFormat({ pattern: '##.## {$hourlyLargestPrefix}' });
@@ -62,10 +62,10 @@
         {
             var data = new google.visualization.DataTable();
 
-            data.addColumn('date', 'Day');
-            data.addColumn('number', 'Traffic In');
-            data.addColumn('number', 'Traffic Out');
-            data.addColumn('number', 'Total Traffic');
+            data.addColumn('date', '天');
+            data.addColumn('number', '下载');
+            data.addColumn('number', '上传');
+            data.addColumn('number', '全部');
 
             data.addRows([
 {foreach from=$dailyGraphData key=key item=value}
@@ -74,7 +74,7 @@
             ]);
             
             let options = {
-                title: 'Daily Network Traffic',
+                title: '天流量图表',
                 orientation: 'horizontal',
                 legend: { position: 'right' },
                 explorer: { 
@@ -83,17 +83,17 @@
                     maxZoomOut: 3.0
             	},
                 vAxis: {
-                    title: 'Data',
+                    title: '数据',
                     format: '##.## {$dailyLargestPrefix}'
                 },
                 hAxis: {
-                    title: 'Day',
-                    format: 'dd/MM/YYYY',
+                    title: '天流量图表',
+                    format: 'yyyy-MM-dd',
                     direction: -1
                 }
             };
             
-            var formatDate = new google.visualization.DateFormat({ pattern: 'dd/MM/yyyy' });
+            var formatDate = new google.visualization.DateFormat({ pattern: 'yyyy-MM-dd' });
             formatDate.format(data, 0);
             
             var formatNumber = new google.visualization.NumberFormat({ pattern: '##.## {$dailyLargestPrefix}' });
@@ -109,10 +109,10 @@
         {
             var data = new google.visualization.DataTable();
 
-            data.addColumn('date', 'Month');
-            data.addColumn('number', 'Traffic In');
-            data.addColumn('number', 'Traffic Out');
-            data.addColumn('number', 'Total Traffic');
+            data.addColumn('date', '月');
+            data.addColumn('number', '下载');
+            data.addColumn('number', '上传');
+            data.addColumn('number', '全部');
 
             data.addRows([
 {foreach from=$monthlyGraphData key=key item=value}
@@ -121,7 +121,7 @@
             ]);
 
             let options = {
-                title: 'Monthly Network Traffic',
+                title: '月流量图表',
                 orientation: 'horizontal',
                 legend: { position: 'right' },
                 explorer: { 
@@ -130,17 +130,17 @@
                     maxZoomOut: 3.0
             	},
                 vAxis: {
-                    title: 'Data',
+                    title: '数据',
                     format: '##.## {$monthlyLargestPrefix}'
                 },
                 hAxis: {
-                    title: 'Month',
-                    format: 'MMMM YYYY',
+                    title: '月流量图表',
+                    format: 'YYYY-MM',
                     direction: -1
                 }
             };
             
-            var formatDate = new google.visualization.DateFormat({ pattern: 'MMMM YYYY' });
+            var formatDate = new google.visualization.DateFormat({ pattern: 'yyyy-MM' });
             formatDate.format(data, 0);
             
             var formatNumber = new google.visualization.NumberFormat({ pattern: '##.## {$monthlyLargestPrefix}' });

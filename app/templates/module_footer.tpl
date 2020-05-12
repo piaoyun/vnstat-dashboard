@@ -1,7 +1,7 @@
     <footer class="footer">
         <div class="container">
             <span class="text-muted">Copyright (C) {$year} Alexander Marston -
-                <a href="https://github.com/alexandermarston/vnstat-dashboard">vnstat-dashboard</a>
+                <a href="https://github.com/alexandermarston/vnstat-dashboard" target="_blank">vnstat-dashboard</a> - <a href="https://gitee.com/piaoyun/vnstat-dashboard" target="_blank">PiaoYun 自用修改版</a>
             </span>
         </div>
     </footer>
