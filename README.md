@@ -17,8 +17,8 @@ github地址（国外）：https://github.com/piaoyun/vnstat-dashboard
 cd /home/wwwroot
 wget https://gitee.com/piaoyun/vnstat-dashboard/repository/archive/master.zip
 unzip master.zip
-mv vnstat-dashboard-master/app/* vnstat
-rm vnstat-dashboard-master -rf
+mv vnstat-dashboard/app/* vnstat
+rm vnstat-dashboard -rf
 cd vnstat
 composer install
 nano includes/config.php
